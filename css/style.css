@@ -1,4 +1,7 @@
-/*
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -9,8 +12,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+figure, figcaption, footer, header, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -19,11 +21,11 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-*/
+
 /* HTML5 display-role reset for older browsers */
-/*
+
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
     display: block;
 }
 body {
@@ -37,14 +39,13 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
     content: none;
 }
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-*/
+
 /* My styles */
 
 @font-face {
@@ -82,8 +83,8 @@ nav li {
     font-size: 14px;
     color: #ffffff;
     padding: 18px 0 18px 0;
-    margin-right: 35px;
-    margin-left: 35px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 nav li a:link, a:visited {
@@ -129,6 +130,10 @@ nav li a:link, a:visited {
     position:relative;
 }
 
+.jumbotron li {
+    display: none;
+}
+
 .arrowLeft {
     position: absolute;
     top: 179px;
@@ -143,7 +148,7 @@ nav li a:link, a:visited {
 
 .bchair {
     float: left;
-    padding: 20px 0 0 0;
+    padding: 40px 0 0 30px;
 }
 
 .main_description {
@@ -153,17 +158,17 @@ nav li a:link, a:visited {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    margin: 70px 30px 0 -80px;
+    margin: 90px 30px 0 -40px;
 }
 
 .main_description h1 {
     text-transform: uppercase;
     font-size: 30px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .main_description p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5em;
 }
 
@@ -171,8 +176,8 @@ nav li a:link, a:visited {
     text-transform: uppercase;
     background-color: #24BA9F;
     color: #ffffff;
-    font-size: 18px;
-    height: 36px;
+    font-size: 20px;
+    height: 40px;
     width: 200px;
     border-radius: 10px;
     padding: 9px 0;
@@ -191,22 +196,23 @@ nav li a:link, a:visited {
 .examples {
     width: auto;
     background: #ffffff;
-    height: auto;
+    height: 290px;
     display: block;
+    position: relative;
     border: 0;
-    margin: 15px 30px 80px 30px;
+    margin: 15px 30px 15px 30px;
 }
 
 .examples article {
     float: left;
-    margin: 5px;
+    margin: 0 10px 0 0;
+    position: relative;
 }
 
 .examples_more {
     border: 1px solid #D6D6D6;
-    width: 220px;
+    width: 232px;
     float: left;
-    margin: 5px;
     padding: 15px;
     box-sizing: border-box;
 }
@@ -214,6 +220,7 @@ nav li a:link, a:visited {
 .examples_more p {
     font-size: 12px;
     color: #808080;
+    padding: 16px 0;
 }
 
 .examples h3 {
@@ -225,18 +232,18 @@ nav li a:link, a:visited {
 
 .examples_description {
     background: rgba(255,255,255,.5);
-    position: relative;
-    top: -80px;
-    width: auto;
-    height: 30px;
-    padding: 8px 8px 20px 8px;
+    position: absolute;
+    top: 150px;
+    width: 329px;
+    height: 50px;
+    padding: 8px 8px 8px 8px;
 }
 
 .examples_title {
     display: block;
     border-bottom: 5px solid #24BA9F;
     width: 150px;
-    padding: 0 0 5px 0;
+    padding: 12px 0 5px 0;
 }
 
 /* Pricelist styling */
@@ -316,7 +323,7 @@ h2 {
     position: relative;
     top: 7px;
     left: 146px;
-    margin: 0 281px 0 0;
+    margin: 0 282px 0 0;
 }
 
 .pricelist_circles p.pricelist_type2 {
