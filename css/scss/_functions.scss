@@ -1,0 +1,3 @@
+@function getBoxWidth($neighbours){
+@return ($default-width - $basic-margin - $neighbours:width);
+};
