@@ -134,19 +134,19 @@ nav li a:link, a:visited {
     display: none;
 }
 
-.arrowLeft {
+.arrow-left {
     position: absolute;
     top: 179px;
     left: 30px;
 }
 
-.arrowRight {
+.arrow-right {
     position: absolute;
     top: 179px;
     right: 30px;
 }
 
-.bchair {
+.main_picture {
     float: left;
     padding: 40px 0 0 30px;
 }

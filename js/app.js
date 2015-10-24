@@ -8,11 +8,11 @@ $(function(){
     //dropdown menu
 
 
-    var firstMenuElements = $(".firstLevel li");
-    var secondMenuElements = $(".secondLevel li");
+    var firstMenuElements = $(".first-level li");
+    var secondMenuElements = $(".second-level li");
 
     firstMenuElements.click(function(){
-        var mySecondLevel = $(this).find(".secondLevel li");
+        var mySecondLevel = $(this).find(".second-level li");
         if(mySecondLevel.is(':visible')){
             secondMenuElements.hide();
         }
@@ -21,6 +21,8 @@ $(function(){
             mySecondLevel.show();
         }
     });
+
+
 
 
     //Example names hiding on mouse enter / timeDifference u¿yte, aby zniwelowaæ efekt wielokrotnego odpalania siê animacji przy przypadkowym przejechaniu myszk¹
@@ -51,7 +53,7 @@ $(function(){
 
     images.eq(visibleImage).show();
 
-    $(".arrowRight").click(function(){
+    $(".arrow-right").click(function(){
         images.eq(visibleImage).hide();
         visibleImage++;
         if(visibleImage >= images.length){
@@ -60,7 +62,7 @@ $(function(){
         images.eq(visibleImage).show(200);
     });
 
-    $(".arrowLeft").click(function(){
+    $(".arrow-left").click(function(){
         images.eq(visibleImage).hide();
         visibleImage--;
         if(visibleImage < 0){

@@ -6,7 +6,6 @@
     <!--<link rel="stylesheet" href="css/style.css">-->
     <link rel="stylesheet" href="css/scss/style2.css">
 
-
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/app.js"></script>
 </head>
@@ -15,24 +14,24 @@
 <div class="top-part">
     <nav>
         <div class="content">
-            <ul class="firstLevel">
+            <ul class="first-level">
                 <li class="logo">Sit <span class="green">on</span> chair</li>
                 <li class="links"><a href="#">Kontakt</a>
-                    <ul class="secondLevel">
+                    <ul class="second-level">
                         <li><a href="#">Obsługa klienta</a></li>
                         <li><a href="#">Biuro</a></li>
                     </ul>
                 </li>
 
                 <li class="links"><a href="#">Galeria</a>
-                    <ul class="secondLevel">
+                    <ul class="second-level">
                         <li><a href="#">Produkty</a></li>
                         <li><a href="#">Realizacje</a></li>
                     </ul>
                 </li>
 
                 <li class="links"><a href="#">O firmie</a>
-                    <ul class="secondLevel">
+                    <ul class="second-level">
                         <li><a href="#">Aktualności</a></li>
                         <li><a href="#">Nasz team</a></li>
                         <li><a href="#">Historia</a></li>
@@ -47,11 +46,11 @@
     <div class="jumbotron">
         <div class="content">
 
-            <img class="arrowLeft" src="images/left216.png"/>
+            <img class="arrow-left" src="images/left216.png"/>
 
             <ul>
                 <li>
-                    <figure class="bchair">
+                    <figure class="main_picture">
                         <img src="images/black_chair.png"/>
                     </figure>
 
@@ -63,7 +62,7 @@
                 </li>
 
                 <li>
-                    <figure class="bchair">
+                    <figure class="main_picture">
                         <img src="images/orange.png"/>
                     </figure>
 
@@ -75,7 +74,7 @@
                 </li>
 
                 <li>
-                    <figure class="bchair">
+                    <figure class="main_picture">
                         <img src="images/red.png"/>
                     </figure>
 
@@ -87,7 +86,7 @@
                 </li>
             </ul>
 
-            <img class="arrowRight" src="images/keyboard53.png"/>
+            <img class="arrow-right" src="images/keyboard53.png"/>
 
         </div>
     </div>
@@ -183,6 +182,72 @@
                 </div>
 
             </div>
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="order">
+        <div class="content">
+
+            <ul class="order_title">
+                <li class="left"><h2>Skomponuj swoje krzesło</h2></li>
+                <li class="right">Podsumowanie</li>
+            </ul>
+
+            <div class="clear"></div>
+
+            <div class="order-calculator">
+
+                <select name="chair">
+                    <option value="1000">Chair Clair</option>
+                    <option value="1200">Chair Margarita</option>
+                    <option value="1400">Chair Selena</option>
+                </select>
+
+                <br>
+
+                <select name="color">
+                    <option value="0">Czerwony</option>
+                    <option value="10">Czarny</option>
+                    <option value="20">Pomarańczowy</option>
+                </select>
+
+                <br>
+
+                <select name="material">
+                    <option value="0">Tkanina</option>
+                    <option value="1200">Skóra</option>
+                </select>
+
+                <br>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="transport">
+                    <label for="transport">Transport</label>
+                </div>
+
+            </div>
+
+            <div class="order-image">
+                <img src="images/red_chair.png">
+            </div>
+
+            <div class="order-summary">
+                <form class="summary-calculator">
+                    <input type="text" id="chair" placeholder="Twój fotel"><input type="text" id="chair-price">
+                    <input type="text" id="color"><input type="text" id="color-price">
+                    <input type="text" id="material"><input type="text" id="material-price">
+                    <input type="text" id="transport-value" value="200"><input type="text" id="transport-price">
+                    <input type="text" id="suma" value="suma"><input type="text" id="suma-price">
+
+                    <input type="submit" value="zamawiam">
+                </form>
+            </div>
+
+
+
 
         </div>
     </div>

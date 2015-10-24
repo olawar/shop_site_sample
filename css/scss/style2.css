@@ -69,20 +69,20 @@ nav {
   background-color: #000000;
   width: 100%; }
 
-ul.firstLevel {
+ul.first-level {
   height: 50px; }
-  ul.firstLevel :nth-child(n+3):nth-child(-n+4) {
+  ul.first-level :nth-child(n+3):nth-child(-n+4) {
     padding-right: 50px; }
 
-.firstLevel li {
+.first-level li {
   text-transform: uppercase;
   font-size: 14px;
   color: #ffffff;
   padding: 18px 0 18px 0; }
-  .firstLevel li a:link {
+  .first-level li a:link {
     text-decoration: none;
     color: #ffffff; }
-  .firstLevel li a:visited {
+  .first-level li a:visited {
     text-decoration: none;
     color: #ffffff; }
 
@@ -95,17 +95,17 @@ ul.firstLevel {
 .links {
   float: right; }
 
-.secondLevel {
+.second-level {
   position: absolute;
   top: 80px;
   width: 130px; }
-  .secondLevel li {
+  .second-level li {
     background-color: #000000;
     color: #ffffff;
     text-transform: none;
     padding: 10px;
     display: none; }
-    .secondLevel li:first-child:after {
+    .second-level li:first-child:after {
       bottom: 100%;
       left: 50%;
       border: solid transparent;
@@ -128,17 +128,17 @@ ul.firstLevel {
   .jumbotron li {
     display: none; }
 
-.arrowLeft {
+.arrow-left {
   position: absolute;
   top: 229px;
   left: 30px; }
 
-.arrowRight {
+.arrow-right {
   position: absolute;
   top: 229px;
   right: 30px; }
 
-.bchair {
+.main_picture {
   float: left;
   padding: 31.5px; }
 
@@ -398,6 +398,111 @@ a.pricelist_type2,
 a.pricelist_type2:visited {
   color: #24BA9F;
   background-color: #ffffff; }
+
+/*order*/
+.order {
+  width: auto;
+  background: #F1F1F1;
+  height: 440px;
+  display: block; }
+
+.order-title li {
+  display: inline-block; }
+
+li.left {
+  float: left;
+  border-bottom: 5px solid #24BA9F;
+  margin: 35px 0;
+  width: 329px;
+  height: 23px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #808080; }
+
+li.right {
+  float: right;
+  border-bottom: 5px solid #24BA9F;
+  margin: 35px 0;
+  width: 329px;
+  height: 23px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #808080;
+  text-align: right; }
+
+.order-calculator {
+  width: 329px;
+  float: left; }
+  .order-calculator select {
+    border: 1px solid #24BA9F;
+    width: 329px;
+    height: 45px;
+    margin-bottom: 30px;
+    font-family: 'ralewayregular', sans-serif;
+    padding: 10px;
+    font-size: 20px;
+    color: #808080; }
+  .order-calculator .checkbox {
+    position: relative;
+    margin: 20px 0; }
+    .order-calculator .checkbox input {
+      display: block;
+      opacity: 0;
+      height: 48px;
+      position: absolute;
+      width: 48px; }
+    .order-calculator .checkbox input:checked + label::after {
+      display: block; }
+    .order-calculator .checkbox label {
+      display: block;
+      padding-left: 65px;
+      padding-top: 10px;
+      position: relative;
+      font-size: 24px;
+      color: #808080; }
+      .order-calculator .checkbox label:before, .order-calculator .checkbox label:after {
+        border: 1px solid #24BA9F;
+        background-color: #ffffff;
+        content: "";
+        display: block;
+        left: 0;
+        height: 48px;
+        position: absolute;
+        width: 48px;
+        top: 0; }
+      .order-calculator .checkbox label:after {
+        background: url("../../images/form_ok.jpg") no-repeat center;
+        border: 0;
+        display: none; }
+
+.order-image img {
+  float: left;
+  margin: 0 38.66667px; }
+
+.summary-calculator input {
+  float: left;
+  padding: 10px;
+  box-sizing: border-box; }
+  .summary-calculator input:nth-child(odd) {
+    width: 231.33333px;
+    height: 40px; }
+  .summary-calculator input:nth-child(even) {
+    width: 110px;
+    height: 40px; }
+  .summary-calculator input:first-child {
+    color: #24BA9F;
+    font-size: 20px; }
+  .summary-calculator input:last-child {
+    float: right;
+    margin: 30px 50px;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid #24BA9F;
+    background-color: #24BA9F;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 26px; }
 
 /*contact*/
 .contact {

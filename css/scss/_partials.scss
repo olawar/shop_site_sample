@@ -25,14 +25,14 @@ nav {
   background-color: $basic-black;
   width: 100%;
 }
-  ul.firstLevel {
+  ul.first-level {
     height: 50px;
     :nth-child(n+3):nth-child(-n+4) {
       padding-right: 50px;
     }
   }
 
-    .firstLevel {
+    .first-level {
       li {
         text-transform: uppercase;
         font-size: 14px;
@@ -61,7 +61,7 @@ nav {
   float: right;
 }
 
-.secondLevel {
+.second-level {
   position: absolute;
   top: 80px;
   width: 130px;
@@ -100,19 +100,19 @@ nav {
   }
 }
 
-.arrowLeft {
+.arrow-left {
   position: absolute;
   top: 229px;
   left: 30px;
 }
 
-.arrowRight {
+.arrow-right {
   position: absolute;
   top: 229px;
   right: 30px;
 }
 
-.bchair {
+.main_picture {
   float: left;
   padding: (400px - 337px) / 2 ;
 }
@@ -431,63 +431,55 @@ a.pricelist_type2:visited {
   background-color: $basic-white;
 }
 
-/*contact*/
-
-.contact {
+/*order*/
+.order {
   width: auto;
-  background: $basic-white;
-  height: 480px;
+  background: $basic-gray3;
+  height: 440px;
   display: block;
 }
 
-.contact_title {
-  display: block;
-  position: relative;
-  top: 35px;
+.order-title li{
+  display: inline-block;
+}
+
+li.left {
+  float: left;
   border-bottom: 5px solid $basic-green;
+  margin: 35px 0;
   width: 329px;
   height: 23px;
-  h2 {
-    font-size: 18px;
-    text-transform: uppercase;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $basic-gray2;
+}
+
+li.right {
+  float: right;
+  border-bottom: 5px solid $basic-green;
+  margin: 35px 0;
+  width: 329px;
+  height: 23px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $basic-gray2;
+  text-align: right;
+}
+
+
+.order-calculator {
+  width: 329px;
+  float: left;
+  select {
+    border: 1px solid $basic-green;
+    width: 329px;
+    height: 45px;
+    margin-bottom: 30px;
+    font-family: 'ralewayregular', sans-serif;
+    padding: 10px;
+    font-size: 20px;
     color: $basic-gray2;
   }
-}
-
-
-.to-left{
-  float: left;
-  width: ($default-width - 400px);
-  position: relative;
-  top: 80px;
-  input[type="text"] {
-    margin-bottom: 30px;
-    border: 1px solid $basic-green;
-    height: 40px;
-    width: 600px;
-    font-size: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'ralewayregular', sans-serif;
-  }
-  .wiadomosc {
-    padding: 10px;
-    height: 190px;
-    width: 600px;
-    font-size: 20px;
-    border: 1px solid $basic-green;
-    box-sizing: border-box;
-    font-family: 'ralewayregular', sans-serif;
-  }
-}
-
-.to-right{
-  float: right;
-  width: ($default-width - 624px);
-  position: relative;
-  top: 50px;
-  padding: 0 50px;
-  box-sizing: border-box;
   .checkbox {
     position: relative;
     margin: 20px 0;
@@ -506,11 +498,12 @@ a.pricelist_type2:visited {
       padding-left: 65px;
       padding-top: 10px;
       position: relative;
-      font-size: 16px;
+      font-size: 24px;
       color: $basic-gray2;
       &:before,
       &:after {
         border: 1px solid $basic-green;
+        background-color: $basic-white;
         content: "";
         display: block;
         left: 0;
@@ -526,54 +519,192 @@ a.pricelist_type2:visited {
       }
     }
   }
+}
+
+.order-image {
   img {
-    padding: 0 18px;
+    float: left;
+    margin: 0 ((($default-width /3) - 264px)/2);
+  }
+}
+
+  .summary-calculator {
+    input {
+      float: left;
+      padding: 10px;
+      box-sizing: border-box;
+      &:nth-child(odd) {
+        width: (($default-width/3)-110px);
+        height: 40px;
+      }
+      &:nth-child(even) {
+        width: 110px;
+        height: 40px;
+      }
+      &:first-child {
+        color: $basic-green;
+        font-size: 20px;
+
+      }
+      &:last-child {
+        float: right;
+        margin: 30px 50px;
+        height: 60px;
+        width: 300px;
+        border-radius: 10px;
+        border: 1px solid $basic-green;
+        background-color: $basic-green;
+        color: $basic-white;
+        text-transform: uppercase;
+        font-size: 26px;
+      }
+    }
+  }
+
+  /*contact*/
+
+  .contact {
+    width: auto;
+    background: $basic-white;
+    height: 480px;
+    display: block;
+  }
+
+  .contact_title {
+    display: block;
+    position: relative;
+    top: 35px;
+    border-bottom: 5px solid $basic-green;
+    width: 329px;
+    height: 23px;
+    h2 {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $basic-gray2;
+    }
+  }
+
+
+  .to-left{
+    float: left;
+    width: ($default-width - 400px);
+    position: relative;
+    top: 80px;
+    input[type="text"] {
+      margin-bottom: 30px;
+      border: 1px solid $basic-green;
+      height: 40px;
+      width: 600px;
+      font-size: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: 'ralewayregular', sans-serif;
+    }
+    .wiadomosc {
+      padding: 10px;
+      height: 190px;
+      width: 600px;
+      font-size: 20px;
+      border: 1px solid $basic-green;
+      box-sizing: border-box;
+      font-family: 'ralewayregular', sans-serif;
+    }
+  }
+
+  .to-right{
+    float: right;
+    width: ($default-width - 624px);
+    position: relative;
+    top: 50px;
+    padding: 0 50px;
     box-sizing: border-box;
+    .checkbox {
+      position: relative;
+      margin: 20px 0;
+      input {
+        display: block;
+        opacity: 0;
+        height: 48px;
+        position: absolute;
+        width: 48px;
+      }
+      input:checked + label::after {
+        display: block;
+      }
+      label {
+        display: block;
+        padding-left: 65px;
+        padding-top: 10px;
+        position: relative;
+        font-size: 16px;
+        color: $basic-gray2;
+        &:before,
+        &:after {
+          border: 1px solid $basic-green;
+          content: "";
+          display: block;
+          left: 0;
+          height: 48px;
+          position: absolute;
+          width: 48px;
+          top: 0;
+        }
+        &:after {
+          background: url('../../images/form_ok.jpg') no-repeat center;
+          border: 0;
+          display: none;
+        }
+      }
+    }
+    img {
+      padding: 0 18px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      height: 60px;
+      width: 300px;
+      border-radius: 10px;
+      border: 1px solid $basic-green;
+      background-color: $basic-green;
+      color: $basic-white;
+      text-transform: uppercase;
+      font-size: 26px;
+    }
   }
-  input[type="submit"] {
-    height: 60px;
-    width: 300px;
-    border-radius: 10px;
-    border: 1px solid $basic-green;
-    background-color: $basic-green;
-    color: $basic-white;
+
+  /*references*/
+
+  .references {
+    height: 100px;
+    background-color: $basic-white;
+    margin-top: 20px;
+  }
+
+  .references-items li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .references-copyright {
+    color: $basic-gray2;
+    font-size: 14px;
+    margin-right: 210px;
+    line-height: 20px;
+    a {
+      color: $basic-green;
+    }
+  }
+
+  .references-logo {
+    float: right;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 20px;
+    color: $basic-gray2;
+    padding-top: 10px;
+    span {
+      font-weight: bolder;
+    }
   }
-}
 
-/*references*/
-
-.references {
-  height: 100px;
-  background-color: $basic-white;
-  margin-top: 20px;
-}
-
-.references-items li {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.references-copyright {
-  color: $basic-gray2;
-  font-size: 14px;
-  margin-right: 210px;
-  line-height: 20px;
-  a {
-    color: $basic-green;
-  }
-}
-
-.references-logo {
-  float: right;
-  text-transform: uppercase;
-  font-size: 20px;
-  color: $basic-gray2;
-  padding-top: 10px;
-  span {
-    font-weight: bolder;
-  }
-}
 
 /*end*/
