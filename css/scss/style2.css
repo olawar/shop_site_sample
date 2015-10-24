@@ -54,10 +54,12 @@ body {
   padding: 0;
   border: 0; }
 
+.top-part {
+  position: relative; }
+
 .content {
   width: 1024px;
-  margin: auto;
-  position: relative; }
+  margin: auto; }
 
 .clear {
   clear: both; }
@@ -66,22 +68,23 @@ body {
 nav {
   background-color: #000000;
   width: 100%; }
-  nav ul {
-    height: 50px; }
-    nav ul :nth-child(n+3):nth-child(-n+4) {
-      padding-right: 50px; }
-    nav ul li {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 14px;
-      color: #ffffff;
-      padding: 18px 0 18px 0; }
-      nav ul li a:link {
-        text-decoration: none;
-        color: #ffffff; }
-      nav ul li a:visited {
-        text-decoration: none;
-        color: #ffffff; }
+
+ul.firstLevel {
+  height: 50px; }
+  ul.firstLevel :nth-child(n+3):nth-child(-n+4) {
+    padding-right: 50px; }
+
+.firstLevel li {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 18px 0 18px 0; }
+  .firstLevel li a:link {
+    text-decoration: none;
+    color: #ffffff; }
+  .firstLevel li a:visited {
+    text-decoration: none;
+    color: #ffffff; }
 
 .green {
   color: #24BA9F; }
@@ -92,25 +95,48 @@ nav {
 .links {
   float: right; }
 
+.secondLevel {
+  position: absolute;
+  top: 80px;
+  width: 130px; }
+  .secondLevel li {
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: none;
+    padding: 10px;
+    display: none; }
+    .secondLevel li:first-child:after {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: transparent;
+      border-bottom-color: #000000;
+      border-width: 20px;
+      margin-left: -50px; }
+
 /*Jumbotron styling*/
 .jumbotron {
   width: auto;
   height: 410px;
   background: linear-gradient(to bottom, #ffffff, #D6D6D6);
-  display: block;
-  position: relative; }
+  display: block; }
   .jumbotron li {
     display: none; }
 
 .arrowLeft {
   position: absolute;
-  top: 179px;
-  left: 0; }
+  top: 229px;
+  left: 30px; }
 
 .arrowRight {
   position: absolute;
-  top: 179px;
-  right: 0; }
+  top: 229px;
+  right: 30px; }
 
 .bchair {
   float: left;
@@ -404,14 +430,16 @@ a.pricelist_type2:visited {
     width: 600px;
     font-size: 20px;
     padding: 10px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-family: 'ralewayregular', sans-serif; }
   .to-left .wiadomosc {
     padding: 10px;
     height: 190px;
     width: 600px;
     font-size: 20px;
     border: 1px solid #24BA9F;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-family: 'ralewayregular', sans-serif; }
 
 .to-right {
   float: right;

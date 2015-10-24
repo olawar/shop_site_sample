@@ -5,7 +5,25 @@
 $(function(){
 
 
-    //task 2 - timeDifference u¿yte, aby zniwelowaæ efekt wielokrotnego odpalania siê animacji przy przypadkowym przejechaniu myszk¹
+    //dropdown menu
+
+
+    var firstMenuElements = $(".firstLevel li");
+    var secondMenuElements = $(".secondLevel li");
+
+    firstMenuElements.click(function(){
+        var mySecondLevel = $(this).find(".secondLevel li");
+        if(mySecondLevel.is(':visible')){
+            secondMenuElements.hide();
+        }
+        else {
+            secondMenuElements.hide();
+            mySecondLevel.show();
+        }
+    });
+
+
+    //Example names hiding on mouse enter / timeDifference u¿yte, aby zniwelowaæ efekt wielokrotnego odpalania siê animacji przy przypadkowym przejechaniu myszk¹
 
     var pictureChair = $(".picture_chair");
     var examplesDescription = $("div.examples_description");
@@ -26,7 +44,7 @@ $(function(){
     });
 
 
-    //task3
+    //Slider
 
     var images = $(".jumbotron li");
     var visibleImage = 0;

@@ -7,10 +7,14 @@ body {
   border: 0;
 }
 
+.top-part {
+  position: relative;
+}
+
 .content {
   width: $default-width;
   margin: auto;
-  position: relative;
+ // position: relative;
 }
 .clear {
   clear: both;
@@ -20,29 +24,30 @@ body {
 nav {
   background-color: $basic-black;
   width: 100%;
-  ul {
+}
+  ul.firstLevel {
     height: 50px;
     :nth-child(n+3):nth-child(-n+4) {
       padding-right: 50px;
     }
-    li {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 14px;
-      color: $basic-white;
-      padding: 18px 0 18px 0;
+  }
 
-      a:link {
-        text-decoration: none;
+    .firstLevel {
+      li {
+        text-transform: uppercase;
+        font-size: 14px;
         color: $basic-white;
-      }
-      a:visited {
-        text-decoration: none;
-        color: $basic-white;
+        padding: 18px 0 18px 0;
+        a:link {
+          text-decoration: none;
+          color: $basic-white;
+        }
+        a:visited {
+          text-decoration: none;
+          color: $basic-white;
+        }
       }
     }
-  }
-}
 
 .green {
   color: $basic-green;
@@ -56,6 +61,33 @@ nav {
   float: right;
 }
 
+.secondLevel {
+  position: absolute;
+  top: 80px;
+  width: 130px;
+  li {
+    background-color: $basic-black;
+    color: $basic-white;
+    text-transform: none;
+    padding: 10px;
+    display: none;
+    &:first-child:after {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(0, 0, 0, 0);
+      border-bottom-color: #000000;
+      border-width: 20px;
+      margin-left: -50px;
+    }
+  }
+}
+
 /*Jumbotron styling*/
 
 .jumbotron {
@@ -63,7 +95,6 @@ nav {
   height: 410px;
   background: linear-gradient(to bottom, $basic-white, $basic-gray);
   display: block;
-  position:relative;
   li {
     display: none;
   }
@@ -71,14 +102,14 @@ nav {
 
 .arrowLeft {
   position: absolute;
-  top: 179px;
-  left: 0;
+  top: 229px;
+  left: 30px;
 }
 
 .arrowRight {
   position: absolute;
-  top: 179px;
-  right: 0;
+  top: 229px;
+  right: 30px;
 }
 
 .bchair {
@@ -437,6 +468,7 @@ a.pricelist_type2:visited {
     font-size: 20px;
     padding: 10px;
     box-sizing: border-box;
+    font-family: 'ralewayregular', sans-serif;
   }
   .wiadomosc {
     padding: 10px;
@@ -445,6 +477,7 @@ a.pricelist_type2:visited {
     font-size: 20px;
     border: 1px solid $basic-green;
     box-sizing: border-box;
+    font-family: 'ralewayregular', sans-serif;
   }
 }
 
@@ -531,8 +564,6 @@ a.pricelist_type2:visited {
     color: $basic-green;
   }
 }
-
-
 
 .references-logo {
   float: right;

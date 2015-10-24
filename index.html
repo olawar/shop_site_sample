@@ -12,79 +12,89 @@
 </head>
 <body>
 
+<div class="top-part">
     <nav>
         <div class="content">
-            <ul>
+            <ul class="firstLevel">
                 <li class="logo">Sit <span class="green">on</span> chair</li>
-                <li class="links"><a href="#">Kontakt</a></li>
-                <li class="links"><a href="#">Galeria</a></li>
-                <li class="links"><a href="#">O firmie</a></li>
+                <li class="links"><a href="#">Kontakt</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Obsługa klienta</a></li>
+                        <li><a href="#">Biuro</a></li>
+                    </ul>
+                </li>
+
+                <li class="links"><a href="#">Galeria</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Produkty</a></li>
+                        <li><a href="#">Realizacje</a></li>
+                    </ul>
+                </li>
+
+                <li class="links"><a href="#">O firmie</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Aktualności</a></li>
+                        <li><a href="#">Nasz team</a></li>
+                        <li><a href="#">Historia</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
     <div class="clear"></div>
 
-<!-- tu będzie tooltip
-    <div class="tooltip">
-        <ul>
-            <li>Aktualności</li>
-            <li>Nasz team</li>
-            <li>Historia</li>
-        </ul>
-    </div>
-
-    -->
-
     <div class="jumbotron">
         <div class="content">
+
             <img class="arrowLeft" src="images/left216.png"/>
 
             <ul>
                 <li>
                     <figure class="bchair">
-                    <img src="images/black_chair.png"/>
+                        <img src="images/black_chair.png"/>
                     </figure>
 
                     <article class="main_description">
                         <h1>Sit <span class="green">on </span> our <span class="green">chair</span></h1>
-                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabituret                        ligula. Ut molestie a, ultricies porta urna. </p>
+                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.                                    Curabituret ligula. Ut molestie a, ultricies porta urna. </p>
                         <p class="main_more"><a href="#">Zobacz więcej</a></p>
                     </article>
                 </li>
 
                 <li>
                     <figure class="bchair">
-                    <img src="images/orange.png"/>
+                        <img src="images/orange.png"/>
                     </figure>
 
                     <article class="main_description">
                         <h1>Sit <span class="green">on </span> our <span class="green">chair</span></h1>
-                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur                          et ligula. Ut molestie a, ultricies porta urna. </p>
+                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.                                    Curabitur et ligula. Ut molestie a, ultricies porta urna. </p>
                         <p class="main_more"><a href="#">Zobacz więcej</a></p>
                     </article>
-
                 </li>
 
                 <li>
                     <figure class="bchair">
-                    <img src="images/red.png"/>
+                        <img src="images/red.png"/>
                     </figure>
 
                     <article class="main_description">
                         <h1>Sit <span class="green">on </span> our <span class="green">chair</span></h1>
-                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur                          et ligula. Ut molestie a, ultricies porta urna. </p>
+                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.                                    Curabitur et ligula. Ut molestie a, ultricies porta urna. </p>
                         <p class="main_more"><a href="#">Zobacz więcej</a></p>
                     </article>
                 </li>
             </ul>
 
-             <img class="arrowRight" src="images/keyboard53.png"/>
+            <img class="arrowRight" src="images/keyboard53.png"/>
 
         </div>
     </div>
 
     <div class="clear"></div>
+
+</div>
 
     <div class="examples">
         <div class="content">
@@ -109,16 +119,12 @@
                 <p>Ut molestie a, ultricies porta urna.</p>
             </article>
 
-
         </div>
-
     </div>
-
 
     <div class="clear"></div>
 
     <div class="pricelist">
-
         <div class="content">
 
             <div class="pricelist_title">
@@ -139,7 +145,6 @@
                     <p></p>
                 </div>
 
-
                 <article class="pricelist_type1">
                     <h2>basic plan</h2>
                     <p class="pricelist_prices">85<sup>99</sup><br><span>pln/msc</span></p>
@@ -149,7 +154,6 @@
                     </ul>
 
                 </article>
-
 
                 <article class="pricelist_type2">
                     <h2>standard plan</h2>
@@ -178,17 +182,16 @@
                     <a href="#">Dołącz</a>
                 </div>
 
-
             </div>
 
-
-            </div>
+        </div>
     </div>
 
     <div class="clear"></div>
 
     <div class="contact">
         <div class="content">
+
             <div class="contact_title">
                 <h2>Kontakt</h2>
             </div>
@@ -196,9 +199,9 @@
             <div class="contact-form">
                 <form>
                     <div class="to-left">
-                        <input type="text" id="imie" placeholder="imie">
-                        <input type="text" id="nazwisko" placeholder="nazwisko">
-                        <textarea class="wiadomosc" placeholder="Wiadomosc"></textarea>
+                        <input type="text" id="imie" placeholder="Imię">
+                        <input type="text" id="nazwisko" placeholder="Nazwisko">
+                        <textarea class="wiadomosc" placeholder="Wiadomość"></textarea>
                     </div>
 
                     <div class="to-right">
@@ -207,18 +210,19 @@
                             <input type="checkbox" id="agree">
                             <label for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
                         </div>
-                        <input type="submit" value="wyslij">
+                        <input type="submit" value="wyślij">
                     </div>
-
                 </form>
             </div>
+
         </div>
     </div>
 
     <div class="clear"></div>
 
     <div class="references">
-        <div class="content references-content">
+        <div class="content">
+
                 <ul class="references-items">
                     <li class="references-copyright">
                         <p>Icons made by <a href="http://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>                        is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
@@ -230,9 +234,11 @@
                     <li class="references-item"><a href="http://www.twitter.com"><img src="images/twitter.png"></a></li>
                     <li class="references-logo"> <p>Sit <span>on</span> chair</p></li>
                 </ul>
+
         </div>
     </div>
 
+    <div class="clear"></div>
 
 </body>
 </html>
