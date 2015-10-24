@@ -466,12 +466,159 @@ a.pricelist_type2, a.pricelist_type2:visited {
 }
 
 
-/*references*/
-.references {
-    color: #808080;
-    font-size: 10px;
+
+/*contact*/
+
+.contact {
+    width: auto;
+    background: #ffffff;
+    height: 480px;
+    display: block;
 }
 
-.references a {
+.contact_title {
+    display: block;
+    position: relative;
+    top: 35px;
+    left: 35px;
+    border-bottom: 5px solid #24BA9F;
+    width: 329px;
+    height: 23px;
+}
+
+.contact_title h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #808080;
+}
+
+.to-left {
+    float: left;
+    width: 580px;
+    position: relative;
+    top: 80px;
+    left: 35px;
+}
+
+.to-left input[type="text"] {
+    margin-bottom: 30px;
+    border: 1px solid #24BA9F;
+    height: 40px;
+    width: 500px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.to-left .wiadomosc {
+    padding: 10px;
+    height: 190px;
+    width: 500px;
+    font-size: 20px;
+    border: 1px solid #24BA9F;
+    box-sizing: border-box;
+}
+
+.to-right {
+    float: right;
+    width: 400px;
+    position: relative;
+    top: 50px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.to-right .checkbox {
+    position: relative;
+    margin: 20px 0;
+}
+
+.to-right .checkbox input {
+    display: block;
+    opacity: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+}
+
+.to-right .checkbox input:checked + label::after {
+    display: block;
+}
+
+.to-right .checkbox label {
+    display: block;
+    padding-left: 65px;
+    padding-top: 10px;
+    position: relative;
+    font-size: 16px;
+    color: #808080;
+}
+
+.to-right .checkbox label:before, .to-right .checkbox label:after {
+    border: 1px solid #24BA9F;
+    content: "";
+    display: block;
+    left: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    top: 0;
+}
+
+.to-right .checkbox label:after {
+    background: url("../images/form_ok.jpg") no-repeat center;
+    border: 0;
+    display: none;
+}
+
+.to-right img {
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+
+.to-right input[type="submit"] {
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid #24BA9F;
+    background-color: #24BA9F;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+/*references*/
+.references {
+    height: 100px;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.references-items li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.references-copyright {
+    color: #808080;
+    font-size: 14px;
+    margin-right: 130px;
+    margin-left: 35px;
+    line-height: 20px;
+}
+
+.references-copyright a {
     color: #24BA9F;
+}
+
+.references-logo {
+    float: right;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #808080;
+    padding-top: 10px;
+}
+
+.references-logo span {
+    font-weight: bolder;
 }

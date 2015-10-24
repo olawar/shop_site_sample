@@ -509,15 +509,24 @@ a.pricelist_type2:visited {
   }
 }
 
-
-
-
-
-
 /*references*/
+
 .references {
+  height: 100px;
+  background-color: $basic-white;
+  margin-top: 20px;
+}
+
+.references-items li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.references-copyright {
   color: $basic-gray2;
-  font-size: 10px;
+  font-size: 14px;
+  margin-right: 210px;
+  line-height: 20px;
   a {
     color: $basic-green;
   }
@@ -525,3 +534,15 @@ a.pricelist_type2:visited {
 
 
 
+.references-logo {
+  float: right;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: $basic-gray2;
+  padding-top: 10px;
+  span {
+    font-weight: bolder;
+  }
+}
+
+/*end*/
