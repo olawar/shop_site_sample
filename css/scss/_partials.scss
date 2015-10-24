@@ -400,6 +400,118 @@ a.pricelist_type2:visited {
   background-color: $basic-white;
 }
 
+/*contact*/
+
+.contact {
+  width: auto;
+  background: $basic-white;
+  height: 480px;
+  display: block;
+}
+
+.contact_title {
+  display: block;
+  position: relative;
+  top: 35px;
+  border-bottom: 5px solid $basic-green;
+  width: 329px;
+  height: 23px;
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $basic-gray2;
+  }
+}
+
+
+.to-left{
+  float: left;
+  width: ($default-width - 400px);
+  position: relative;
+  top: 80px;
+  input[type="text"] {
+    margin-bottom: 30px;
+    border: 1px solid $basic-green;
+    height: 40px;
+    width: 600px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .wiadomosc {
+    padding: 10px;
+    height: 190px;
+    width: 600px;
+    font-size: 20px;
+    border: 1px solid $basic-green;
+    box-sizing: border-box;
+  }
+}
+
+.to-right{
+  float: right;
+  width: ($default-width - 624px);
+  position: relative;
+  top: 50px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  .checkbox {
+    position: relative;
+    margin: 20px 0;
+    input {
+      display: block;
+      opacity: 0;
+      height: 48px;
+      position: absolute;
+      width: 48px;
+    }
+    input:checked + label::after {
+      display: block;
+    }
+    label {
+      display: block;
+      padding-left: 65px;
+      padding-top: 10px;
+      position: relative;
+      font-size: 16px;
+      color: $basic-gray2;
+      &:before,
+      &:after {
+        border: 1px solid $basic-green;
+        content: "";
+        display: block;
+        left: 0;
+        height: 48px;
+        position: absolute;
+        width: 48px;
+        top: 0;
+      }
+      &:after {
+        background: url('../../images/form_ok.jpg') no-repeat center;
+        border: 0;
+        display: none;
+      }
+    }
+  }
+  img {
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid $basic-green;
+    background-color: $basic-green;
+    color: $basic-white;
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+}
+
+
+
+
 
 
 /*references*/
