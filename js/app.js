@@ -72,26 +72,68 @@ $(function(){
     });
 
 
+    //Order calculator
 
 
+    $("#select-chair").change(function(){
+        var optionSelected = $("option:selected", this);
+        var targetField = ($("form#summary-calculator input#chair"));
+        targetField.attr("value", optionSelected[0].innerHTML);
+        targetField = ($("form#summary-calculator input#chair-price"));
+        targetField.attr("value", (optionSelected[0].value) + " PLN");
+        targetField.data("value", (optionSelected[0].value));
+        recalculateSum();
+    });
+
+    $("#select-color").change(function(){
+        var optionSelected = $("option:selected", this);
+        var targetField = ($("form#summary-calculator input#color"));
+        targetField.attr("value", optionSelected[0].innerHTML);
+        targetField = ($("form#summary-calculator input#color-price"));
+        targetField.attr("value", (optionSelected[0].value) + " PLN");
+        targetField.data("value", (optionSelected[0].value));
+        recalculateSum();
+    });
+
+    $("#select-material").change(function(){
+        var optionSelected = $("option:selected", this);
+        var targetField = ($("form#summary-calculator input#material"));
+        targetField.attr("value", optionSelected[0].innerHTML);
+        targetField = ($("form#summary-calculator input#material-price"));
+        targetField.attr("value", (optionSelected[0].value) + " PLN");
+        targetField.data("value", (optionSelected[0].value));
+        recalculateSum();
+    });
+
+    $("#transport").click(function(){
+        if ($(this).is(':checked')){
+            var targetField = ($("form#summary-calculator input#transport-value"));
+            targetField.attr("value", "Transport");
+            targetField = ($("form#summary-calculator input#transport-price"));
+            targetField.attr("value", 200 + " PLN");
+            targetField.data("value", 200);
+            recalculateSum();
+        }
+        else {
+            var targetField = ($("form#summary-calculator input#transport-value"));
+            targetField.attr("value", "Transport");
+            targetField = ($("form#summary-calculator input#transport-price"));
+            targetField.attr("value", 0 + " PLN");
+            targetField.data("value", 0);
+            recalculateSum();
+        }
+    });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function recalculateSum(){
+        var inputsToSum = $("input.sum");
+        var sumField = ($("form#summary-calculator input#suma-price"));
+        var summaryAll=0;
+        inputsToSum.each(function(){
+          summaryAll = summaryAll + (parseInt($(this).data("value")) || 0);
+        });
+        sumField.attr("value", (summaryAll + " PLN"));
+    }
 
 
 });

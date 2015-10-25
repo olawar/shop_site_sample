@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Warsztaty 9 pazdziernika</title>
+    <title>Online shop sample page</title>
     <!--<link rel="stylesheet" href="css/style.css">-->
     <link rel="stylesheet" href="css/scss/style2.css">
 
@@ -182,7 +182,6 @@
                 </div>
 
             </div>
-
         </div>
     </div>
 
@@ -198,35 +197,40 @@
 
             <div class="clear"></div>
 
-            <div class="order-calculator">
+            <div>
 
-                <select name="chair">
-                    <option value="1000">Chair Clair</option>
-                    <option value="1200">Chair Margarita</option>
-                    <option value="1400">Chair Selena</option>
-                </select>
+                <form id="order-calculator">
+                    <select name="chair" id="select-chair">
+                        <option selected="selected">Wybierz model</option>
+                        <option value="1000">Chair Clair</option>
+                        <option value="1200">Chair Margarita</option>
+                        <option value="1400">Chair Selena</option>
+                    </select>
 
-                <br>
+                    <br>
 
-                <select name="color">
-                    <option value="0">Czerwony</option>
-                    <option value="10">Czarny</option>
-                    <option value="20">Pomarańczowy</option>
-                </select>
+                    <select name="color" id="select-color">
+                        <option selected="selected">Wybierz kolor</option>
+                        <option value="0">Czerwony</option>
+                        <option value="10">Czarny</option>
+                        <option value="20">Pomarańczowy</option>
+                    </select>
 
-                <br>
+                    <br>
 
-                <select name="material">
-                    <option value="0">Tkanina</option>
-                    <option value="1200">Skóra</option>
-                </select>
+                    <select name="material" id="select-material">
+                        <option selected="selected">Wybierz materiał</option>
+                        <option value="0">Tkanina</option>
+                        <option value="1200">Skóra</option>
+                    </select>
 
-                <br>
+                    <br>
 
-                <div class="checkbox">
-                    <input type="checkbox" id="transport">
-                    <label for="transport">Transport</label>
-                </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="transport">
+                        <label for="transport">Transport</label>
+                    </div>
+                </form>
 
             </div>
 
@@ -235,19 +239,25 @@
             </div>
 
             <div class="order-summary">
-                <form class="summary-calculator">
-                    <input type="text" id="chair" placeholder="Twój fotel"><input type="text" id="chair-price">
-                    <input type="text" id="color"><input type="text" id="color-price">
-                    <input type="text" id="material"><input type="text" id="material-price">
-                    <input type="text" id="transport-value" value="200"><input type="text" id="transport-price">
-                    <input type="text" id="suma" value="suma"><input type="text" id="suma-price">
+                <form id="summary-calculator">
+                    <input type="text" id="chair" placeholder="Twój fotel">
+                    <input type="text" data-value="0" id="chair-price" class="sum">
+
+                    <input type="text" id="color">
+                    <input type="text" data-value="0" id="color-price" class="sum">
+
+                    <input type="text" id="material">
+                    <input type="text" data-value="0" id="material-price" class="sum">
+
+                    <input type="text" id="transport-value">
+                    <input type="text" data-value="0" id="transport-price" class="sum">
+
+                    <input type="text" id="suma" value="SUMA">
+                    <input type="text" id="suma-price">
 
                     <input type="submit" value="zamawiam">
                 </form>
             </div>
-
-
-
 
         </div>
     </div>

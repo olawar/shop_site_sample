@@ -430,10 +430,10 @@ li.right {
   color: #808080;
   text-align: right; }
 
-.order-calculator {
+#order-calculator {
   width: 329px;
   float: left; }
-  .order-calculator select {
+  #order-calculator select {
     border: 1px solid #24BA9F;
     width: 329px;
     height: 45px;
@@ -442,25 +442,25 @@ li.right {
     padding: 10px;
     font-size: 20px;
     color: #808080; }
-  .order-calculator .checkbox {
+  #order-calculator .checkbox {
     position: relative;
     margin: 20px 0; }
-    .order-calculator .checkbox input {
+    #order-calculator .checkbox input {
       display: block;
       opacity: 0;
       height: 48px;
       position: absolute;
       width: 48px; }
-    .order-calculator .checkbox input:checked + label::after {
+    #order-calculator .checkbox input:checked + label::after {
       display: block; }
-    .order-calculator .checkbox label {
+    #order-calculator .checkbox label {
       display: block;
       padding-left: 65px;
       padding-top: 10px;
       position: relative;
       font-size: 24px;
       color: #808080; }
-      .order-calculator .checkbox label:before, .order-calculator .checkbox label:after {
+      #order-calculator .checkbox label:before, #order-calculator .checkbox label:after {
         border: 1px solid #24BA9F;
         background-color: #ffffff;
         content: "";
@@ -470,7 +470,7 @@ li.right {
         position: absolute;
         width: 48px;
         top: 0; }
-      .order-calculator .checkbox label:after {
+      #order-calculator .checkbox label:after {
         background: url("../../images/form_ok.jpg") no-repeat center;
         border: 0;
         display: none; }
@@ -479,20 +479,29 @@ li.right {
   float: left;
   margin: 0 38.66667px; }
 
-.summary-calculator input {
+#summary-calculator input {
   float: left;
   padding: 10px;
-  box-sizing: border-box; }
-  .summary-calculator input:nth-child(odd) {
+  box-sizing: border-box;
+  font-family: 'ralewayregular', sans-serif;
+  border: none;
+  font-size: 16px;
+  color: #808080; }
+  #summary-calculator input:nth-child(odd) {
     width: 231.33333px;
     height: 40px; }
-  .summary-calculator input:nth-child(even) {
-    width: 110px;
+  #summary-calculator input:nth-child(even) {
+    width: 122px;
     height: 40px; }
-  .summary-calculator input:first-child {
+  #summary-calculator input:nth-child(-n+2) {
     color: #24BA9F;
     font-size: 20px; }
-  .summary-calculator input:last-child {
+  #summary-calculator input:nth-child(n+9):nth-child(-n+10) {
+    font-size: 18px;
+    border-top: 1px solid #808080; }
+  #summary-calculator input:nth-child(-2n+8) {
+    border-left: 1px solid #808080; }
+  #summary-calculator input:last-child {
     float: right;
     margin: 30px 50px;
     height: 60px;
@@ -595,7 +604,8 @@ li.right {
     background-color: #24BA9F;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 26px; }
+    font-size: 26px;
+    font-family: 'ralewayregular', sans-serif; }
 
 /*references*/
 .references {
