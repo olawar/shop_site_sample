@@ -22,14 +22,23 @@ $(function(){
         }
     });
 
-
-
-
     //Example names hiding on mouse enter / timeDifference u¿yte, aby zniwelowaæ efekt wielokrotnego odpalania siê animacji przy przypadkowym przejechaniu myszk¹
 
-    var pictureChair = $(".picture_chair");
+    var pictureChair = $("article.examples_pictures");
     var examplesDescription = $("div.examples_description");
     var timeLast = 0, timeDifference = 0;
+
+    //simple version
+
+    //pictureChair.mouseenter(function (){
+    //    $(this).find('.examples_description').hide();
+    //});
+    //
+    //pictureChair.mouseleave(function (){
+    //    $(this).find('.examples_description').show();
+    //});
+
+    //advanced version
 
     pictureChair.mouseenter(function (){
         timeDifference = event.timeStamp - timeLast;
@@ -44,7 +53,6 @@ $(function(){
         var order = $(this).data("order");
         examplesDescription.eq(order).show(500);
     });
-
 
     //Slider
 
